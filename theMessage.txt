@@ -1,0 +1,6 @@
+Python is an interpreted language.
+It is not compiled.
+A Python program can be written as procedural or object oriented.
+Many companies are choosing this language over Java or C++ because of its power and simplicity.
+This line is irrelevant.
+The Python language is optimal for many tasks and platforms.
