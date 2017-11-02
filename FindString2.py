@@ -9,7 +9,7 @@ def findWords(s):  # Function to find a word within a string
     """Return first instance of word found"""
     result = -1  # Pre-set result to -1
     try:
-        s = s.lower();  # Convert string to lower case for searching
+        s = s.lower()  # Convert string to lower case for searching
 
         # Loop through words in seachWords and try to find in string s
         for searchWord in seachWords:
@@ -37,7 +37,7 @@ lineCnt = 0
 for line in myText:
     lineCnt += 1
     theResult = findWords(line)
-    if theResult != -1:
+    if theResult != -1: # Word Found
         output = 'Line {}: {}'.format(lineCnt, line)
         print(output)
 
