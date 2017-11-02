@@ -39,6 +39,6 @@ for line in myText:
     lineCnt += 1
     theResult = findWords(line)
     if theResult != -1: # Word Found
-        output = 'Line {}: {}'.format(lineCnt, line)
+        output = '\'{}\' found on line {}:\n{}\n'.format(theResult, lineCnt, line.strip())
         print(output)
 
