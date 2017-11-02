@@ -3,15 +3,16 @@
 # Define the words to search for
 seachWords = ("java", "python")
 
+
 # Define Functions
-def findPython(s):  # Function to find a word within a string
+def findWords(s):  # Function to find a word within a string
     """Return first instance of word found"""
+    result = -1  # Pre-set result to -1
     try:
-        result = -1 # Pre-set result to -1
-        s = s.lower(); # Convert string to lower case for searching
+        s = s.lower();  # Convert string to lower case for searching
 
         # Loop through words in seachWords and try to find in string s
-        for searchWord in seachWords:            
+        for searchWord in seachWords:
             result = s.find(searchWord)
             if result != -1:
                 result = searchWord
@@ -27,18 +28,16 @@ def findPython(s):  # Function to find a word within a string
 
 # Begin Main Program
 
-fileI = open('theMessage.txt', 'r') # Open Input file for reading
-myText = list(fileI) # Read file into string myText
-fileI.close # Close input file
+fileI = open('theMessage.txt', 'r')  # Open Input file for reading
+myText = list(fileI)  # Read file into string myText
+fileI.close()  # Close input file
 
 # Print lines that contain the selected word
-cnt = 0
+lineCnt = 0
 for line in myText:
-        cnt += 1
-        theResult = findPython(line)
-        if theResult != -1:
-                output = 'Line {}: {}'.format(cnt, line)
-                print(output)
-
-
+    lineCnt += 1
+    theResult = findWords(line)
+    if theResult != -1:
+        output = 'Line {}: {}'.format(lineCnt, line)
+        print(output)
 
