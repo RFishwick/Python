@@ -5,20 +5,21 @@ seachWords = ("java", "python")
 
 
 # Define Functions
-def findWords(s):  # Function to find a word within a string
+def findWords(iLine):  # Function to find a word within a string
     """Return first instance of word found"""
-    result = -1  # Pre-set result to -1
+
+    result = -1  # Pre-set result to -1 in case of loop fall through
     try:
-        s = s.lower()  # Convert string to lower case for searching
+        iLine = iLine.lower()  # Convert string to lower case for searching
 
         # Loop through words in seachWords and try to find in string s
         for searchWord in seachWords:
-            result = s.find(searchWord)
+            result = iLine.find(searchWord)
             if result != -1:
                 result = searchWord
                 break
 
-        # -1 will be returned if no search words found in string s
+        # -1 will be returned if no search words found in string iLine
         return result
 
     except:
