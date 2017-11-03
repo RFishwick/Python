@@ -1,7 +1,7 @@
 # Search for Words in a String
 
 # Define the words to search for
-seachWords = ("c++", "basic", "java", "python")
+searchWords = ("c++", "basic", "java", "python")
 
 
 # Define Functions
@@ -13,17 +13,17 @@ def findWords(iLine):  # Function to find a word within a string
         iLine = iLine.lower()  # Convert string to lower case for searching
 
         # Loop through words in seachWords and try to find in string s
-        for searchWord in seachWords:
-            result = iLine.find(searchWord)
-            if result != -1:
-                result = searchWord
+        for searchWord in searchWords:
+            position = iLine.find(searchWord)  # Get postion of word in iLine
+            if position != -1:
+                result = searchWord  # Set result to value of found searchWord
                 break
 
         # -1 will be returned if no search words found in string iLine
         return result
 
     except:
-        # Fall through on errors
+        # Fall through on any error
         return result
 
 
