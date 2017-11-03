@@ -1,7 +1,7 @@
 # Search for Words in a String
 
 # Define the words to search for
-seachWords = ("java", "python")
+seachWords = ("c++", "basic", "java", "python")
 
 
 # Define Functions
