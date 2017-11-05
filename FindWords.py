@@ -8,7 +8,7 @@ searchWords = ("c++", "basic", "java", "python")
 def findWord(iLine):  # Function to find a word within a string
     """Return first word in sentence matching a word in the searchWords tuple"""
 
-    result = -1  # Pre-set result to -1 in case loop falls through
+    result = None  # Pre-set result to None in case loop falls through
     try:
         iLine = iLine.lower()  # Convert string to lower case for searching
 
@@ -19,7 +19,7 @@ def findWord(iLine):  # Function to find a word within a string
                 result = searchWord  # Set result to value of found searchWord
                 break
 
-        # -1 will be returned if no search words found in string iLine
+        # None will be returned if no search words found in string iLine
         return result
 
     except:
@@ -38,7 +38,7 @@ lineCnt = 0
 for line in myText:
     lineCnt += 1
     theResult = findWord(line)
-    if theResult != -1: # Word Found
-        output = '\'{}\' found on line {}:\n{}\n'.format(theResult, lineCnt, line.strip())
+    if theResult != None: # Word Found
+        output = '\'{}\' found on line {}:\n{}\n'.format(theResult.title(), lineCnt, line.strip())
         print(output)
 
