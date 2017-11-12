@@ -1,4 +1,4 @@
-def findWord(i_line):  # Function to find a word within a string
+def find_word(i_line):  # Function to find a word within a string
     """Return first word in sentence matching a word in the searchWords tuple"""
 
     # Define the words to search for the tuple searchWords

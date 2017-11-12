@@ -12,7 +12,7 @@ fileI.close()  # Close input file
 lineCnt = 0
 for line in my_text:
     lineCnt += 1
-    theResult = WordFinder.findWord(line)
+    theResult = WordFinder.find_word(line)
     if theResult != None: # Word Found
         output = '\'{}\' found on line {}:\n{}\n'.format(theResult.title(), lineCnt, line.strip())
         print(output)
