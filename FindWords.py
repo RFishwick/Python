@@ -15,5 +15,3 @@ for line in my_text:
     theResult = WordFinder.find_word(line)
     if theResult != None: # Word Found
         output = '\'{}\' found on line {}:\n{}\n'.format(theResult.title(), lineCnt, line.strip())
-        print(output)
-
