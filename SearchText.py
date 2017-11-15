@@ -1,4 +1,4 @@
-# Search for Words in a String
+# Search for Words in a Text File
 
 import WordFinder
 
