@@ -10,10 +10,21 @@ file_i.close()  # Close input file
 
 
 # Print lines that contain the selected word
+# lineCnt = 0
+# for line in my_text:
+#     lineCnt += 1
+#     the_result = WordFinder.find_word(line)
+#     if the_result is not None:  # Word Found
+#         output = "'{}' found on line {}:\n{}\n".format(the_result.title(), lineCnt, line.strip())
+#         print(output)
+
+
+# Print lines that contain the selected words
 lineCnt = 0
 for line in my_text:
     lineCnt += 1
-    the_result = WordFinder.find_word(line)
-    if the_result is not None:  # Word Found
-        output = "'{}' found on line {}:\n{}\n".format(the_result.title(), lineCnt, line.strip())
+    the_result = WordFinder.find_words(line)
+
+    if the_result:
+        output = "{} found on line {}:\n{}\n".format(the_result, lineCnt, line.strip())
         print(output)
