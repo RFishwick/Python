@@ -27,7 +27,7 @@ def find_word(i_line):  # Function to find a word within a string
         return None
 
 
-def find_words(i_line: object) -> object:  # Function to find words within a string
+def find_words(i_line):  # Function to find words within a string
     """Return words in a sentence matching a word in the search_words tuple"""
 
     # Define the words to search for the tuple search_words
@@ -41,7 +41,7 @@ def find_words(i_line: object) -> object:  # Function to find words within a str
         position = i_line.find(search_word)  # Get position of word in i_line
 
         if position != -1:
-            found_words.append([search_word]) # Set result to value of found search_word
+            found_words.append([search_word])  # Set result to value of found search_word
             # break
 
     return found_words
