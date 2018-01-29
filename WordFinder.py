@@ -1,3 +1,5 @@
+# Functions for SearchText.py
+
 def find_word(i_line):  # Function to find a word within a string
     """Return first word in a sentence matching a word in the search_words tuple"""
 
