@@ -23,8 +23,15 @@ file_i.close()  # Close input file
 lineCnt = 0
 for line in my_text:
     lineCnt += 1
-    the_result = WordFinder.find_words(line)
+    found_words = []
+    found_words = WordFinder.find_words(line)
 
-    if the_result:
+    the_result = ''
+    if found_words:
+        the_result = found_words[0]
+        for found_word in found_words[1:]:
+            the_result = the_result + ", " + found_word
+
+        # print(str(the_result) + '\n')
         output = "{} found on line {}:\n{}\n".format(the_result, lineCnt, line.strip())
         print(output)

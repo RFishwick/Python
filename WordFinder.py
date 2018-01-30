@@ -1,5 +1,6 @@
 # Functions for SearchText.py
 
+
 def find_word(i_line):  # Function to find a word within a string
     """Return first word in a sentence matching a word in the search_words tuple"""
 
@@ -28,10 +29,12 @@ def find_word(i_line):  # Function to find a word within a string
 
 
 def find_words(i_line):  # Function to find words within a string
-    """Return words in a sentence matching a word in the search_words tuple"""
+    """Return words in a sentence matching a word in the search_words tuple
+    :rtype: object
+    """
 
     # Define the words to search for the tuple search_words
-    search_words = ("c++", "basic", "java", "python")
+    search_words = ("basic", "c++",  "java", "python")
     found_words = []
 
     i_line = i_line.lower()  # Convert string to lower case for searching
@@ -41,7 +44,9 @@ def find_words(i_line):  # Function to find words within a string
         position = i_line.find(search_word)  # Get position of word in i_line
 
         if position != -1:
-            found_words.append([search_word])  # Set result to value of found search_word
+            # print("find_words search_word: " + str(search_word))
+            found_words.append(search_word.title())  # Set result to value of found search_word
             # break
 
+    # print('found_words: ' + str(found_words))
     return found_words
